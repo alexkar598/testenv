@@ -1,3 +1,4 @@
+badcode()
 /*
 	These are simple defaults for your project.
  */
