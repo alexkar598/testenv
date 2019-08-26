@@ -64,8 +64,8 @@ var/datum/nodehost/nh = new /datum/nodehost
 	id = "shutdown"
 
 /datum/topicdatum/shutdown/Run()
-	. = FALSE //return true if shutdown happened,false if ignored
-	//shutdown()
+	. = TRUE //return true if shutdown happened,false if ignored
+	shutdown()
 
 /datum/topicdatum/restart
 	id = "restart"
@@ -82,7 +82,8 @@ var/datum/nodehost/nh = new /datum/nodehost
 			if(D.id == params["action"])
 				if(D.topickey == null || D.topickey == params["extrakey"])
 					return D.Run(params["extraparam"])
+	
 
+	
 
-
-
+	
